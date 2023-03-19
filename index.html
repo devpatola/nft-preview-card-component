@@ -10,13 +10,29 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
-        extend: {
-          theme: {
-            colors: {},
+        theme: {
+          fontFamily: {
+            sans: ["Outfit", "sans-serif"],
+          },
+          extend: {
+            colors: {
+              "soft-blue": "hsl(215, 51%, 70%)",
+              cyan: "hsl(178, 100%, 50%)",
+              "very-dark-blue-main": "hsl(217, 54%, 11%)",
+              "very-dark-blue-card": "hsl(216, 50%, 16%)",
+              "very-dark-blue-line": "hsl(215, 32%, 27%)",
+            },
           },
         },
       };
@@ -33,27 +49,49 @@
     </style>
   </head>
   <body>
-    <main>
-      <div>
-        <h1>Equilibrium #3429</h1>
-        <p>Our Equilibrium collection promotes balance and calm.</p>
+    <!-- main session -->
+    <main class="bg-very-dark-blue-main min-h-screen">
+      <!-- nft card -->
+      <div class="bg-very-dark-blue-card">
+        <!-- nft preview -->
+        <img src="" alt="" />
+        <!-- end of nft preview -->
+        <!-- title and description -->
         <div>
-          <img src="" alt="" />
-          <p>0.041 ETH</p>
-        </div>
-        <div>
-          <img src="" alt="" />
-          <p>3 days left</p>
-        </div>
-        <div>
-          <img src="" alt="" />
-          <p>
-            Creation of
-            <span> Jules Wyvern</span>
+          <h1 class="text-white">Equilibrium #3429</h1>
+          <p class="text-lg text-soft-blue">
+            Our Equilibrium collection promotes balance and calm.
           </p>
         </div>
+        <!-- end of title and description -->
+        <!-- value and days left -->
+        <div>
+          <div>
+            <img src="" alt="" />
+            <p class="text-lg text-cyan">0.041 ETH</p>
+          </div>
+          <div>
+            <img src="" alt="" />
+            <p class="text-lg text-soft-blue">3 days left</p>
+          </div>
+        </div>
+        <!-- end of value and days left -->
+        <!-- border -->
+        <div class="border border-very-dark-blue-line"></div>
+        <!-- end of border -->
+        <!-- creation -->
+        <div>
+          <img src="" alt="" />
+          <p class="text-lg text-soft-blue">
+            Creation of
+            <span class="text-white"> Jules Wyvern</span>
+          </p>
+        </div>
+        <!-- end of creation -->
       </div>
+      <!-- end of nft card -->
     </main>
+    <!-- end of main session -->
     <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
